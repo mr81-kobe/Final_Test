@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+<table>
+    <tr><th>아이디</th> <th>비밀번호</th> <th>매칭</th></tr>
+    <tr th:each="dto : ${list}"  >
+        <td th:text="${dto.id}" ></td>
+        <td th:text="${dto.pwd}"></td>
+        <td><input type="button" id="${dtoStat.index}"></td>
+    </tr>
+
+</table>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+<a href="/loginform">로그인</a>
+<button id="but">채팅방</button>
+<a href="/registform">회원가입</a>
+<a href="/chatList">chatList</a>
+
+
+<h1 th:text="${session.userID}"></h1>
+님 환영합니다.
+
+<script>
+$('#but').click(function (){window.open("http://localhost:9090/chat", "", "");})
+
+
+</script>
+</body>
+</html>
